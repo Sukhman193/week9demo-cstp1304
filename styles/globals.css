@@ -14,3 +14,53 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.header {
+  background-color: skyblue;
+}
+
+.footer {
+  background-color: lightgreen;
+}
+
+.main {
+  background-color: lightcoral;
+}
+
+.nav {
+  background-color: lightseagreen;
+}
+
+/* Apply all these styles to the classes inside wrapper */
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+/* Standard desktop */
+@media all and (min-width: 800px)  {
+
+.main {flex: 4 0px;}
+.header { order: 1;}
+.main { order: 2;}
+.nav {flex: 1; order:3 ;}
+.footer { order: 4;}
+}
+
+
+@media all and (min-width: 600px)   {
+
+.nav {flex: 2 0px;}
+.header { order: 1;}
+.main { order: 2;}
+.nav {order:3 ;}
+.footer { order :5}
+
+} 
